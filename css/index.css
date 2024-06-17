@@ -8,6 +8,11 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     background-color: red;
+    /* font Maven Pro */
+
+    p {
+        font-family: Open Sans;
+    }
 }
 
 header {
@@ -45,6 +50,10 @@ header {
 
 .logo {
     grid-row: span 2;
+    background: url(/assets/logo\ hand.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .seedling {
