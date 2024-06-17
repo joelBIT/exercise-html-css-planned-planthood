@@ -13,8 +13,11 @@ header {
     justify-items: center;
 
     > * {
-        align-self: center;
+        margin: 0;
         width: 100%;
+        height: 100%;
+        align-content: center;
+        text-align-last: center;
     }
 }
 
@@ -25,10 +28,8 @@ header {
 .seedling {
     grid-column-start: 2;
     background-color: #9E6D52;
-    padding: 1rem 0;
 }
 
 .dig {
     background-color: #35846E;
-    padding: 1rem 0;
 }
