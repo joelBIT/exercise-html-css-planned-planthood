@@ -1,5 +1,6 @@
 :root {
     --theme-green-color: #35846E;
+    --link-green-color: #055647;
 }
 
 body {
@@ -8,7 +9,7 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     background-color: red;
-    /* font Maven Pro */
+    font-family: 'Maven Pro';
 
     p {
         font-family: Open Sans;
@@ -31,6 +32,8 @@ header {
 
     nav {
         grid-column: span 2;
+        align-content: start;
+        margin-top: 1rem;
 
         ul {
             display: flex;
@@ -41,8 +44,8 @@ header {
             a {
                 text-decoration: none;
                 font-size: 1.5rem;
-                color: var(--theme-green-color);
-                font-weight: bold;
+                color: var(--link-green-color);
+                font-weight: 500;
             }
         }
     }
@@ -50,7 +53,7 @@ header {
 
 .logo {
     grid-row: span 2;
-    background: url(/assets/logo\ hand.jpeg);
+    background: url(/assets/logo-hand.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
