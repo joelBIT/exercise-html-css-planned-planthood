@@ -13,24 +13,14 @@ body {
     height: 100vh;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    background-color: red;
     font-family: 'Maven Pro';
-
-    p, h2 {
-        font-family: 'Open Sans';
-    }
-
-    h3 {
-        margin: 0;
-    }
 }
 
 header {
     background-color: #F5F5F3;
-    grid-column: 2 / 12;
     display: grid;
     justify-items: center;
+    grid-column: span 12;
 
     > * {
         margin: 0;
@@ -103,19 +93,21 @@ header {
 }
 
 main {
-    display: grid;
-    grid-column: 2 / 12;
-    padding: 2rem;
+    grid-column: span 12;
 
     h1 {
         font-size: 48px;
         color: var(--theme-green-color);
-        justify-self: center;
+        text-align: center;
         font-weight: 500;
     }
 
+    .season {
+        grid-column: span 12;
+        background-color: red;
+    }
+
     > section {
-        display: grid;
         justify-self: center;
 
         .border {
@@ -135,7 +127,8 @@ main {
         .cards {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
-            gap: 1rem;
+            gap: 2rem;
+            padding: 4rem;
 
             article {
                 display: grid;
@@ -208,16 +201,21 @@ main {
             grid-row: 4;
         }
     }
+
+    .earlier {
+        grid-column: span 12;
+        background-color: red;
+    }
 }
 
 footer {
     display: grid;
-    grid-column: 2 / 12;
+    grid-column: span 12;
     background: url(/assets/hand-above-plants.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 0;
+
 
     section {
         opacity: 0.5;
