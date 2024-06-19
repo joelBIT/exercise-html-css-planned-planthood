@@ -12,7 +12,6 @@
 body {
     height: 100vh;
     margin: 0;
-    display: grid;
     font-family: 'Maven Pro';
 }
 
@@ -34,6 +33,7 @@ header {
         grid-column: span 2;
         align-content: start;
         margin-top: 1rem;
+        box-shadow: 0px 4px 4px 0px #03382F1C;
 
         ul {
             display: flex;
@@ -105,7 +105,12 @@ header {
 }
 
 main {
-    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    
+    > * {
+        grid-column: 2 / 12;
+    }
 
     h1 {
         font-size: 48px;
@@ -115,9 +120,7 @@ main {
     }
 
     .season {
-        background-color: red;
         display: flex;
-        padding: 4rem;
         gap: 4rem;
 
         figure {
@@ -127,12 +130,16 @@ main {
             align-items: center;
             justify-content: center;
             margin: 0;
-            width: 100%;
+            
+            svg {
+                padding: 8rem;
+            }
         }
 
         .sow {
             display: flex;
             flex-direction: column;
+            align-self: center;
 
             h1 {
                 text-align: left;
@@ -146,16 +153,21 @@ main {
                 font-family: 'Open Sans';
                 font-size: 16px;
                 font-weight: 400;
+                margin: 0;
             }
 
             button {
                 align-self: self-end;
                 width: 50%;
+                margin-top: 2rem;
             }
         }
     }
 
     > section {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+
         .border {
             border-top: solid;
             border-color: var(--link-green-color);
@@ -173,8 +185,8 @@ main {
         .cards {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
+            grid-column: span 12;
             gap: 2rem;
-            padding: 4rem;
 
             article {
                 display: grid;
@@ -208,7 +220,7 @@ main {
 
                     svg {
                         width: 100%;
-                        height: 50%;
+                        padding: 6rem 0;
                     }
                 }
 
