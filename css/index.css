@@ -293,7 +293,7 @@ footer {
         grid-column: span 2;
 
         section {
-            opacity: 0.5;
+            opacity: 0.8;
             background-color: black;
             display: grid;
             grid-template-rows: 5fr 1fr;
@@ -327,6 +327,7 @@ footer {
                 color: white;
                 font-size: 20px;
                 font-weight: 400;
+                font-style: normal;
             }
         }
     
@@ -350,12 +351,22 @@ footer {
         font-family: 'Open Sans';
         box-shadow: 0px 4px 4px 0px #03382F1C;
         padding-bottom: 2rem;
+        font-style: normal;
     }
 }
 
 @media (max-width: 600px) {
     body {
         grid-template-columns: auto;
+
+        main > article.earlier > figure {
+            margin: 0rem 2rem;
+
+            > svg {
+                padding: 3rem 0rem;
+                height: 50%;
+            }
+        }
     }
 
     header, main, footer {
@@ -390,31 +401,7 @@ footer {
     main {
         > h1 {
             font-size: 24px;
-        }
-
-        article.season {
-            flex-direction: column-reverse;
-
-            figure {
-                margin: 0 4rem;
-            }
-        }
-
-        section.sow {
-            align-items: center;
-
-            > h1 {
-                font-size: 16px;
-            }
-
-            p {
-                font-size: 14px;
-                text-align: center;
-            }
-
-            button.theme-button {
-                align-self: center;
-            }
+            margin-top: 3rem;
         }
 
         .planted {
@@ -425,7 +412,7 @@ footer {
             > h2 {
                 font-size: 16px;
                 font-family: 'Open Sans';
-                margin-top: 3rem;
+                margin: 3rem 0 2rem 0;
             }
 
             .cards {
@@ -473,15 +460,29 @@ footer {
             }
         }
 
-        article.earlier {
+        article.earlier, article.season {
             flex-direction: column-reverse;
 
-            figure {
-                margin: 0 4rem;
+            section.sow {
+                align-items: center;
+
+                h1 {
+                    font-size: 16px;
+                }
+
+                p {
+                    font-size: 14px;
+                    text-align: center;
+                }
+
+                button.theme-button {
+                    align-self: center;
+                    font-size: 16px;
+                }
             }
 
-            section.sow button.theme-button {
-                align-self: center;
+            figure {
+                margin: 0 1rem;
             }
         }
     }
@@ -490,7 +491,26 @@ footer {
         padding: 0;
 
         .footer {
-            
+            display: flex;
+            flex-direction: column-reverse;
+
+            .footer-logo {
+                padding: 6rem 0;
+            }
+
+            h1 {
+                font-size: 32px;
+                padding: 6rem 0;
+            }
+
+            address h3 {
+                font-size: 12px;
+            }
+        }
+
+        h2 {
+            margin-bottom: 0;
+            font-size: 12px;
         }
     }
 }
