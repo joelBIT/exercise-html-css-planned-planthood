@@ -119,9 +119,10 @@ main {
         font-weight: 500;
     }
 
-    .season {
+    article.season {
         display: flex;
         gap: 4rem;
+        margin: 2rem 0 4rem 0;
 
         figure {
             background-color: var(--theme-green-color);
@@ -171,7 +172,7 @@ main {
         .border {
             border-top: solid;
             border-color: var(--link-green-color);
-            grid-column: span 3;
+            grid-column: 5 / 9;
         }
 
         h2 {
@@ -212,22 +213,18 @@ main {
                 figure {
                     margin: 0;
                     grid-column: span 4;
-                    display: block;
-                    height: 100%;
-                    align-content: center;
+                   
                     background-repeat: no-repeat;
                     background-size: cover;
 
                     svg {
                         width: 100%;
-                        padding: 6rem 0;
+                        padding: 3rem 0;
                     }
                 }
 
                 p {
                     font-size: 16px;
-                    text-align: right;
-                    margin-right: 2rem;
                 }
 
                 h4 {
@@ -256,7 +253,13 @@ main {
         }
     }
 
-    .earlier {
+    button.theme-button {
+        padding: 1rem;
+        margin: 4rem 0;
+        grid-column: 6 / 8;
+    }
+
+    article.earlier {
         grid-column: span 12;
         background-color: red;
     }
