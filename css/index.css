@@ -308,17 +308,17 @@ footer {
             figure {
                 display: flex;
                 margin: 0;
-                align-items: flex-end;
+                align-items: center;
+
+                > svg {
+                    margin: 0 1rem;
+                }
             }
     
             h3 {
                 color: white;
                 font-size: 20px;
                 font-weight: 400;
-            }
-    
-            .phone svg, .email svg {
-                width: 7%;
             }
         }
     
@@ -376,32 +376,28 @@ footer {
             font-size: 24px;
         }
 
-        .earlier {
-            flex-direction: column;
-        }
-
         article.season {
             flex-direction: column-reverse;
 
             figure {
                 margin: 0 4rem;
             }
+        }
 
-            .sow {
-                align-items: center;
-    
-                > h1 {
-                    font-size: 16px;
-                }
+        section.sow {
+            align-items: center;
 
-                p {
-                    font-size: 14px;
-                    text-align: center;
-                }
+            > h1 {
+                font-size: 16px;
+            }
 
-                > button {
-                    align-self: center;
-                }
+            p {
+                font-size: 14px;
+                text-align: center;
+            }
+
+            button.theme-button {
+                align-self: center;
             }
         }
 
@@ -422,6 +418,14 @@ footer {
                 > article {
                     grid-column: span 1;
                 }
+            }
+        }
+
+        article.earlier {
+            flex-direction: column;
+
+            figure {
+                margin: 0 4rem;
             }
         }
     }
