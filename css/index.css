@@ -148,7 +148,7 @@ main {
             justify-content: center;
             margin: 0;
             
-            svg {
+            img {
                 padding: 5rem;
             }
         }
@@ -231,7 +231,7 @@ main {
                     background-repeat: no-repeat;
                     background-size: cover;
 
-                    svg {
+                    img {
                         width: 100%;
                         padding: 3rem 0;
                     }
@@ -285,7 +285,7 @@ main {
     }
 }
 
-body > main > article.earlier > figure > svg {
+body > main > article.earlier > figure > img {
     padding: 5rem 7rem;
 }
 
@@ -333,7 +333,7 @@ footer {
                 margin: 0;
                 align-items: center;
 
-                > svg {
+                > img {
                     margin: 0 1rem;
                 }
             }
@@ -377,7 +377,7 @@ footer {
         main > article.earlier > figure {
             margin: 0rem 2rem;
 
-            > svg {
+            > img {
                 padding: 3rem 0rem;
                 height: 50%;
             }
@@ -408,7 +408,7 @@ footer {
     .seedling, .dig {
         grid-column: span 3;
 
-        svg {
+        img {
             width: 70%;
         }
     }
@@ -468,7 +468,7 @@ footer {
                         justify-self: flex-end;
                         margin-right: 1rem;
 
-                        svg {
+                        img {
                             width: fit-content;
                             padding: 0;
                         }
@@ -510,7 +510,7 @@ footer {
             figure {
                 margin: 0 2rem;
 
-                svg {
+                img {
                     padding: 3rem 4rem;
                 }
             }
@@ -555,9 +555,8 @@ main {
                 figure {
                     text-align: center;
 
-                    svg {
+                    img {
                         width: 50%;
-                        padding: 0;
                     }
                 }
             }
