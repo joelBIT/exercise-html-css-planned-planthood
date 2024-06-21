@@ -372,28 +372,28 @@ footer {
     }
 
     footer {
-        display: grid;
         grid-template-columns: repeat(12, 1fr);
-        padding: 1rem;
-        background-color: var(--footer-background-color);
         gap: 1rem;
         align-items: self-end;
+        padding: 0;
 
-        figure:nth-child(2) {
-            height: 45%;
-        }
-
-        figure {
-            grid-column: span 6;
-
-            img {
-                height: 100%;
-                width: 100%;
+        .footer-images {
+            background-color: var(--footer-background-color);
+            padding: 1rem;
+            grid-template-rows: 100px 100px;
+            gap: 0.7rem;
+    
+            figure {
+                grid-column: span 6;
+    
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
             }
         }
 
         h2 {
-            background-color: var(--background-content-color);
             grid-column: span 12;
             margin-bottom: 0;
             font-size: 12px;
