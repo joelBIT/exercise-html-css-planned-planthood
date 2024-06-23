@@ -368,7 +368,13 @@ footer {
     }
 }
 
+
+
+
 @media (max-width: 600px) {
+
+/* || GENERAL STYLES */
+
     body {
         grid-template-columns: auto;
     }

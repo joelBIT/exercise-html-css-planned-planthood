@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Maven+Pro:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+
+/* || GENERAL STYLES */
+
+
 :root {
     --theme-green-color: #35846E;
     --link-green-color: #055647;
@@ -19,8 +23,46 @@ body {
     background-color: var(--background-margin-color);
 }
 
-header {
+main, header, footer {
     grid-column: 2 / 6;
+}
+
+p {
+    font-size: 16px;
+    text-align: right;
+    font-family: 'Open Sans';
+}
+
+h3 {
+    font-family: 'Lato';
+    margin-left: 1rem;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+h4 {
+    font-family: 'Lato';
+    margin-left: 1rem;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.theme-button {
+    background-color: var(--theme-green-color);
+    color: white;
+    border-radius: 8px;
+    font-size: 24px;
+    font-family: 'Inter';
+    font-weight: 600;
+    border: thin;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    padding: 1rem 2rem;
+    grid-column: 5 / 9;
+}
+
+/* || HEADER AND NAVIGATION */
+
+header {
     background-color: var(--background-content-color);
     margin-bottom: 3rem;
     height: 100%;
@@ -70,8 +112,9 @@ header {
     }
 }
 
+/* || MAIN CONTENT */
+
 main {
-    grid-column: 2 / 6;
     background-color: var(--background-content-color);
     padding: 0 2rem 3rem 2rem;
 
@@ -94,7 +137,7 @@ main {
             font-weight: 400;
         }
 
-        label.add-date {
+        .add-date {
             grid-row: 1;
         }
 
@@ -105,19 +148,6 @@ main {
             height: 100%;
             border: thin;
         }
-    }
-
-    .theme-button {
-        background-color: var(--theme-green-color);
-        color: white;
-        border-radius: 8px;
-        font-size: 24px;
-        font-family: 'Inter';
-        font-weight: 600;
-        border: thin;
-        box-shadow: 0px 4px 4px 0px #00000040;
-        padding: 1rem 2rem;
-        grid-column: 5 / 9;
     }
 
     .planned-plants, .planted-plants {
@@ -137,7 +167,7 @@ main {
             gap: 2rem;
             margin-bottom: 3rem;
     
-            article {
+            .card {
                 display: grid;
                 grid-column: span 4;
                 align-items: center;
@@ -146,25 +176,11 @@ main {
     
                 .cucumber {
                     background: url(/assets/cucumber.jpeg);
+                    background-size: cover;
                 }
     
                 .trash-icon {
                     display: none;
-                }
-    
-                h3, h4 {
-                    font-family: 'Lato';
-                    margin-left: 1rem;
-                }
-    
-                h3 {
-                    font-size: 24px;
-                    font-weight: 600;
-                }
-
-                h4 {
-                    font-weight: 300;
-                    font-size: 16px;
                 }
     
                 figure {
@@ -179,19 +195,13 @@ main {
                     }
                 }
     
-                p {
-                    font-size: 16px;
-                    text-align: right;
-                    font-family: 'Open Sans';
-                }
-    
-                p, button {
+                p, .remove {
                     grid-column-start: 4;
                     font-weight: 700;
                     margin-right: 1rem;
                 }
     
-                button {
+                .remove {
                     background-color: var(--button-bg-color);
                     color: white;
                     font-size: 15px;
@@ -205,8 +215,9 @@ main {
     }
 }
 
+/* || FOOTER */
+
 footer {
-    grid-column: 2 / 6;
     padding-bottom: 5rem;
 
     .footer-images {
@@ -243,6 +254,9 @@ footer {
 
 
 @media (max-width: 600px) {
+
+/* || GENERAL STYLES */
+
     body {
         display: flex;
         flex-direction: column;
@@ -251,6 +265,31 @@ footer {
     header, main, footer {
         grid-column: span 6;
     }
+
+    .theme-button {
+        width: 40%;
+        align-self: center;
+        padding: 0.5rem 0;
+        font-size: 16px;
+        font-family: 'Open Sans';
+        font-weight: 400;
+        margin: 0;
+    }
+
+    p {
+        font-size: 10px;
+        font-family: 'Open Sans';
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 10px;
+    }
+
+    /* || HEADER AND NAVIGATION */
 
     header {
         grid-template-rows: 2fr 1fr;
@@ -308,6 +347,8 @@ footer {
         }
     }
 
+/* || MAIN CONTENT */
+
     main {
         padding: 0 2rem;
 
@@ -329,16 +370,6 @@ footer {
                 border: 1px solid #FFFFFF;
                 height: 36px;
             }
-
-            button.theme-button {
-                width: 40%;
-                align-self: center;
-                padding: 0.5rem 0;
-                font-size: 16px;
-                font-family: 'Open Sans';
-                font-weight: 400;
-                margin: 0;
-            }
         }
 
         .planted-plants, .planned-plants {
@@ -353,21 +384,8 @@ footer {
                 grid-template-columns: 1fr 1fr;
                 gap: 2rem;
 
-                > article {
+                .card {
                     grid-column: span 1;
-
-                    p {
-                        font-size: 10px;
-                        font-family: 'Open Sans';
-                    }
-
-                    h3 {
-                        font-size: 14px;
-                    }
-
-                    h4 {
-                        font-size: 10px;
-                    }
 
                     button {
                         display: none;
@@ -395,7 +413,7 @@ footer {
                 }
             }
 
-            button.theme-button {
+            .theme-button {
                 font-size: 16px;
                 font-family: 'Open Sans';
                 font-weight: 700;
@@ -403,6 +421,8 @@ footer {
             }
         }
     }
+
+    /* || FOOTER */
 
     footer {
         grid-template-columns: repeat(12, 1fr);
