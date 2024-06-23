@@ -215,7 +215,7 @@ main {
             gap: 2rem;
             margin-bottom: 3rem;
 
-            article {
+            article.card {
                 display: grid;
                 grid-column: span 4;
                 align-items: center;
@@ -242,6 +242,7 @@ main {
                     grid-column: span 4;
                     background-size: cover;
                     background-position: center;
+                    text-align: center;
 
                     img {
                         padding: 2rem 0;
@@ -457,7 +458,7 @@ footer {
                 grid-template-columns: 1fr 1fr;
                 gap: 1rem;
 
-                > article {
+                article.card {
                     grid-column: span 1;
 
                     p {
@@ -488,9 +489,7 @@ footer {
                             padding: 0;
                         }
                     }
-                }
 
-                article.card {
                     figure:not(.trash-icon) {
                         text-align: center;
     
