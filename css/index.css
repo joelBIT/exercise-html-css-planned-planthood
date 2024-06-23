@@ -365,15 +365,6 @@ footer {
 @media (max-width: 600px) {
     body {
         grid-template-columns: auto;
-
-        main > article.earlier > figure {
-            margin: 0rem 2rem;
-
-            > img {
-                padding: 3rem 0rem;
-                height: 50%;
-            }
-        }
     }
 
     header, main, footer {
@@ -414,23 +405,23 @@ footer {
                 } 
             }
         }
-    }
 
-    .logo {
-        grid-column: span 6;
-        grid-row: span 1;
-    }
-
-    .seedling, .dig {
-        grid-column: span 3;
-
-        img {
-            width: 70%;
+        .logo {
+            grid-column: span 6;
+            grid-row: span 1;
         }
-    }
-
-    nav {
-        display: none;
+    
+        .seedling, .dig {
+            grid-column: span 3;
+    
+            img {
+                width: 70%;
+            }
+        }
+    
+        nav {
+            display: none;
+        }
     }
 
     main {
@@ -536,6 +527,13 @@ footer {
 
                 img {
                     padding: 3rem 4rem;
+                }
+            }
+            
+            figure.earlier-plant {
+                img {
+                    padding: 2rem 0rem;
+                    height: 50%;
                 }
             }
         }
