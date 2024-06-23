@@ -21,6 +21,10 @@ body {
     background-color: var(--background-margin-color);
 }
 
+main, header, footer {
+    grid-column: 2 / 6;
+}
+
 h4 {
     font-weight: 300;
     font-size: 16px;
@@ -40,12 +44,35 @@ h4 {
     padding: 1rem;
 }
 
+.cucumber {
+    background: url(/assets/cucumber.jpeg);
+}
+
+.tomatoes {
+    background: url(/assets/tomatoes.jpeg);
+}
+
+.tomato {
+    background: url(/assets/tomato.jpeg);
+}
+
+.greens {
+    background: url(/assets/greens.jpeg);
+}
+
+.turnips {
+    background: url(/assets/turnips.jpeg);
+}
+
+.squash {
+    background: url(/assets/flower.jpeg);
+}
+
 /* || HEADER AND NAVIGATION */
 
 header {
     display: grid;
     justify-items: center;
-    grid-column: 2 / 6;
     grid-template-rows: 5fr 5fr 1fr;
     background-color: var(--background-content-color);
 
@@ -54,6 +81,23 @@ header {
         width: 100%;
         align-content: center;
         text-align-last: center;
+    }
+
+    .logo {
+        grid-row: span 2;
+        background: url(/assets/logo-hand.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .seedling {
+        grid-column-start: 2;
+        background-color: #9E6D52;
+    }
+    
+    .dig {
+        background-color: var(--theme-green-color);
     }
 
     .burger {
@@ -83,28 +127,10 @@ header {
     }
 }
 
-.logo {
-    grid-row: span 2;
-    background: url(/assets/logo-hand.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.seedling {
-    grid-column-start: 2;
-    background-color: #9E6D52;
-}
-
-.dig {
-    background-color: var(--theme-green-color);
-}
-
 /* || MAIN CONTENT */
 
 main {
     display: grid;
-    grid-column: 2 / 6;
     grid-template-columns: repeat(12, 1fr);
     background-color: var(--background-content-color);
     
@@ -171,30 +197,6 @@ main {
         figure > img {
             padding: 5rem 7rem;
         }
-    }
-
-    .cucumber {
-        background: url(/assets/cucumber.jpeg);
-    }
-    
-    .tomatoes {
-        background: url(/assets/tomatoes.jpeg);
-    }
-    
-    .tomato {
-        background: url(/assets/tomato.jpeg);
-    }
-    
-    .greens {
-        background: url(/assets/greens.jpeg);
-    }
-    
-    .turnips {
-        background: url(/assets/turnips.jpeg);
-    }
-    
-    .squash {
-        background: url(/assets/flower.jpeg);
     }
     
     .trash-icon {
@@ -294,7 +296,6 @@ main {
 
 footer {
     display: grid;
-    grid-column: 2 / 6;
     padding-bottom: 5rem;
     background-color: var(--background-content-color);
     
@@ -383,6 +384,11 @@ footer {
         grid-column: span 6;
     }
 
+
+    h4 {
+        font-size: 10px;
+    }
+
     /* || HEADER AND NAVIGATION */
 
     header {
@@ -442,20 +448,19 @@ footer {
 
     main {
 
-        > h1 {
+        h1 {
             font-size: 24px;
         }
 
         .planted-plants {
             grid-column: 1 / 13;
-            margin-left: 1rem;
-            margin-right: 1rem;
+            margin: 0 1rem;
 
             .border {
                 grid-column: 3 / 11;
             }
 
-            > h2 {
+            h2 {
                 font-size: 16px;
                 font-family: 'Open Sans';
                 margin: 3rem 0 2rem 0;
@@ -475,10 +480,6 @@ footer {
 
                     h3 {
                         font-size: 14px;
-                    }
-
-                    h4 {
-                        font-size: 10px;
                     }
 
                     .remove {
