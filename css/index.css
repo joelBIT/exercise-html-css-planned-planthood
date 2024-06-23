@@ -188,7 +188,7 @@ main {
         display: none;
     }
 
-    .planted {
+    .planted-plants {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
 
@@ -254,13 +254,13 @@ main {
                     font-family: 'Open Sans';
                 }
 
-                p, button {
+                p, button.remove {
                     grid-column-start: 4;
                     font-weight: 700;
                     margin-right: 1rem;
                 }
 
-                button {
+                button.remove {
                     background-color: var(--button-bg-color);
                     color: white;
                     font-size: 15px;
@@ -272,7 +272,7 @@ main {
             }
         }
 
-        button.theme-button {
+        button.show-more {
             padding: 1rem;
         }
     }
@@ -290,7 +290,7 @@ footer {
     padding-bottom: 5rem;
     background-color: var(--background-content-color);
     
-    .footer {
+    .footer-area {
         background: url(/assets/hand-above-plants.jpeg);
         background-size: cover;
         background-repeat: no-repeat;
@@ -298,42 +298,42 @@ footer {
         display: grid;
         grid-column: span 2;
 
-        section {
+        .footer-information {
             opacity: 0.8;
             background-color: black;
             display: grid;
             grid-template-rows: 9fr 1fr;
             grid-row: span 2;
-        }
 
-        h1 {
-            font-size: 64px;
-            font-weight: 500;
-            color: white;
-            font-family: 'Maven Pro';
-            text-align: center;
-            align-content: center;
-        }
-
-        address {
-            display: flex;
-            justify-content: space-between;
-    
-            figure {
-                display: flex;
-                margin: 0;
-                align-items: center;
-
-                > img {
-                    margin: 0 1rem;
-                }
-            }
-    
-            h3 {
+            h1 {
+                font-size: 64px;
+                font-weight: 500;
                 color: white;
-                font-size: 20px;
-                font-weight: 400;
-                font-style: normal;
+                font-family: 'Maven Pro';
+                text-align: center;
+                align-content: center;
+            }
+
+            address {
+                display: flex;
+                justify-content: space-between;
+        
+                figure {
+                    display: flex;
+                    margin: 0;
+                    align-items: center;
+    
+                    > img {
+                        margin: 0 1rem;
+                    }
+                }
+        
+                h3 {
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 400;
+                    font-style: normal;
+                }
             }
         }
     
@@ -438,7 +438,7 @@ footer {
             font-size: 24px;
         }
 
-        .planted {
+        .planted-plants {
             grid-column: 1 / 13;
             margin-left: 1rem;
             margin-right: 1rem;
@@ -473,7 +473,7 @@ footer {
                         font-size: 10px;
                     }
 
-                    button {
+                    button.remove {
                         display: none;
                     }
 
@@ -489,9 +489,19 @@ footer {
                         }
                     }
                 }
+
+                article.card {
+                    figure:not(.trash-icon) {
+                        text-align: center;
+    
+                        img {
+                            width: 50%;
+                        }
+                    }
+                }
             }
 
-            button.theme-button {
+            button.show-more {
                 font-size: 16px;
                 font-family: 'Open Sans';
                 font-weight: 700;
@@ -535,46 +545,36 @@ footer {
     footer {
         padding: 0;
 
-        .footer {
+        .footer-area {
             display: flex;
             flex-direction: column-reverse;
 
             .footer-logo {
-                padding: 6rem 0;
+                padding: 4rem 0;
             }
 
-            h1 {
-                font-size: 32px;
-            }
+            .footer-information {
+                display: block;
 
-            address {
-                margin-bottom: 1rem;
+                h1 {
+                    font-size: 32px;
+                    padding: 7rem 0;
+                }
 
-                h3 {
-                    font-size: 12px;
+                address {
+                    margin-bottom: 1rem;
+    
+                    h3 {
+                        font-size: 12px;
+                    }
                 }
             }
         }
 
         h2 {
+            margin-top: 1rem;
             margin-bottom: 0;
             font-size: 12px;
-        }
-    }
-}
-
-main {
-    & > section {
-        & .cards {
-            & article {
-                figure {
-                    text-align: center;
-
-                    img {
-                        width: 50%;
-                    }
-                }
-            }
         }
     }
 }
