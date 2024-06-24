@@ -447,7 +447,7 @@ footer {
         .footer-images {
             background-color: var(--footer-background-color);
             padding: 1rem;
-            grid-template-rows: 100px 100px;
+            grid-template-rows: 1fr 1fr;
             gap: 0.7rem;
     
             figure {
@@ -456,6 +456,10 @@ footer {
                 img {
                     height: 100%;
                     width: 100%;
+                }
+
+                .vertical-image {
+                    aspect-ratio: 16 / 9;
                 }
             }
         }
