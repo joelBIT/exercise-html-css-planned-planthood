@@ -57,7 +57,10 @@ h4 {
     border: thin;
     box-shadow: 0px 4px 4px 0px #00000040;
     padding: 1rem 2rem;
-    grid-column: 5 / 9;
+    grid-column: span 12;
+    display: flex;
+    justify-content: center;
+    place-self: center;
 }
 
 button:hover {
@@ -284,11 +287,6 @@ footer {
     }
 
     main {
-        .add-plant button {
-            font-size: 17px;
-            padding: 1rem 0;
-        }
-
         .planted-plants, .planned-plants {
             .cards {
                 grid-template-columns: 1fr 1fr;
