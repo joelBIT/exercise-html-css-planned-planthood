@@ -380,11 +380,94 @@ footer {
 
 
 
+@media (max-width: 1321px) {
+    body {
+        grid-template-columns: repeat(12, 1fr);
+    }
 
-@media (max-width: 600px) {
+    header, main, footer {
+        grid-column: 2 / 12;
+    }
+}
 
-/* || GENERAL STYLES */
 
+
+@media (max-width: 1100px) {
+    .theme-button {
+        font-size: 20px;
+    }
+
+    main {
+        .planted-plants {
+            .cards {
+                .card h3 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 965px) {
+    header {
+        grid-template-rows: 4fr 4fr 1fr;
+    }
+
+    main {
+        margin-bottom: 3rem;
+
+        .planted-plants {
+            .cards {
+                .card {
+                    p {
+                        font-size: 14px;
+                    }
+
+                    h3 {
+                        font-size: 17px;
+                    }
+
+                    h4 {
+                        font-size: 12px;
+                    }
+
+                    .remove {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        .theme-button {
+            padding: 1rem;
+            font-size: 17px;
+        }
+
+        .earlier, .season {
+            figure {
+                padding: 0;
+                margin: 0 2rem;
+                aspect-ratio: 1;
+
+                img {
+                    width: 50%;
+                    height: 100%;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    footer .footer-area .footer-information {
+        grid-template-rows: 6fr 1fr;
+    }
+}
+
+
+
+@media (max-width: 860px) {
     body {
         grid-template-columns: auto;
     }
@@ -393,11 +476,32 @@ footer {
         grid-column: span 6;
     }
 
-
     h4 {
         font-size: 10px;
     }
 
+    main {
+        .planted-plants {
+            .cards {
+                grid-template-columns: 1fr 1fr;
+                    gap: 1rem;
+    
+                    .card {
+                        grid-column: span 1;
+                    }
+            }
+        }
+
+        .show-more {
+            grid-column: 5 / 9;
+        }
+    }
+
+}
+
+
+
+@media (max-width: 690px) {
     /* || HEADER AND NAVIGATION */
 
     header {
@@ -477,11 +581,8 @@ footer {
             }
 
             .cards {
-                grid-template-columns: 1fr 1fr;
-                gap: 1rem;
 
                 .card {
-                    grid-column: span 1;
 
                     p {
                         font-size: 10px;
