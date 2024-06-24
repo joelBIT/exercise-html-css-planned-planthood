@@ -64,6 +64,11 @@ button:hover {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+    color: #1E1E1E;
+}
+
 /* || HEADER AND NAVIGATION */
 
 header {
