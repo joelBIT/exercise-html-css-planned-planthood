@@ -146,10 +146,6 @@ main {
             font-weight: 400;
         }
 
-        .add-date {
-            grid-row: 1;
-        }
-
         button {
             margin: 2rem;
         }
@@ -161,6 +157,10 @@ main {
             height: 45px;
             border: thin;
             font-size: 1.3rem;
+        }
+
+        #name {
+            grid-row: 2;
         }
     }
 
